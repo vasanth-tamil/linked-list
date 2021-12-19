@@ -56,7 +56,7 @@ Node *create(int size){
 
 // delete node 
 Node *delete(Node *p){
-	printf("Deleted Address %x, value %d\n", p, p->data);
+	printf("Deleted Address %p, value %d\n", p, p->data);
 	p->data = '\0';
 	p = p->link;
 	return p;
@@ -69,7 +69,7 @@ void print(Node *p){
 	current = p;
 
 	while(current != 0){
-		printf("Current Address %p, Value %d, Next Address 0x%x\n", current, current->data, current->link);
+		printf("Current Address %p, Value %d, Next Address %p\n", current, current->data, current->link);
 		current = current -> link;
 	}
 
